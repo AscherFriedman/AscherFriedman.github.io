@@ -293,7 +293,7 @@ test_various_splits(df_samples,np.arange(0,recommended_splits*3,3),recommended_s
     
 
 
-![png](Pseudo_Stratify_files/output_19_1.png)
+![png](/images/Pseudo_Stratify_files/output_19_1.png)
 
 
     
@@ -309,7 +309,7 @@ test_various_splits(df_samples,np.arange(0,recommended_splits*3,3),recommended_s
     
 
 
-![png](Pseudo_Stratify_files/output_19_3.png)
+![png](/images/Pseudo_Stratify_files/output_19_3.png)
 
 
 ## Results
