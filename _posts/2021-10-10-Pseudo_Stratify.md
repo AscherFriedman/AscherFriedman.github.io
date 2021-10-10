@@ -89,7 +89,7 @@ We can see on average, the stratified split is much closer to the overall distri
 ```python
 def add_splits(df_input,n_splits,split_name,verbose=False):
     sorted_indices=np.argsort(df_input.y) #This gives us list of indices that correspond to ascending values
-    splits=np.array_split(sorted_indices, n_splits) #Now we split this into 10 sublists 
+    splits=np.array_split(sorted_indices, n_splits) #Now we split this into n sublists 
     #Print the means for every split and put the split number into the dataframe
     for i in range(n_splits):                    
         if verbose==True: #If we want to print intermediate info
