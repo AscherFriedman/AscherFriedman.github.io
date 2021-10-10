@@ -4,7 +4,7 @@
 ## High Level Idea
 Most compitent datascientists understand that if you have a categorical response variable that is extremely unbalanced, you should stratify your train/test split. This ensures that your test and train set are both representative of the overall dataset. 
 
-But what happens when you have a continuous response variable that is extremely skewed? Well in short you have the same problem, and without this trick, its quite likely you'll generates a test set not representative of the overall dataset. 
+But what happens when you have a continuous response variable that is extremely skewed? Well in short you have the same problem, and without this trick, its quite likely you'll generates a test set not representative of the overall dataset. To be more robust we could probably use Kolmogorov-Smirnov tests, but for this we will simply compare means of the distributions, as this is often an important metric in practice.
 
 1. TOC
 {:toc} 
