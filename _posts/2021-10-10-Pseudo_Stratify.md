@@ -1,5 +1,8 @@
 # Pseudo Stratification for Skewed Continuous Response Variables
 
+Table of Contents:
+1. TOC
+{:toc}
 
 
 ```python
@@ -16,8 +19,7 @@ Most compitent datascientists understand that if you have a categorical response
 
 But what happens when you have a continuous response variable that is extremely skewed. Well in short you have the same problem, its quite likely one generates a test set with a mean not representative of the overall dataset. 
 
-1. TOC
-{:toc}
+
 
 ## Generate an uneven distribution and plot it
 
