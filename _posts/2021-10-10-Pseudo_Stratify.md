@@ -200,7 +200,7 @@ test_various_splits(df_samples,np.arange(0,50,1),recommended_splits=recommended_
 ![png](/images/Pseudo_Stratify_files/output_12_3.png)
 
 
-## Medium Importance of Stratified Sampling
+## Medium Importance of Stratified Sampling 1
 Low sample size, low skew
 
 ```python
@@ -238,7 +238,7 @@ test_various_splits(df_samples,np.arange(0,50,1),recommended_splits=recommended_
 ![png](/images/Pseudo_Stratify_files/output_14_3.png)
 
 
-## Medium Importance of Stratified Sampling
+## Medium Importance of Stratified Sampling 2
 Medium Sample Size, high skew
 
 ```python
