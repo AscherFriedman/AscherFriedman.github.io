@@ -1,4 +1,4 @@
-# Pseudo Stratification for Extremely Skewed Continuous Response Variables
+# Pseudo Stratification for Skewed Continuous Response Variables
 
 
 
