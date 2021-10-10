@@ -66,8 +66,6 @@ def get_avg_diff(df,pseudo_stratify=None,verbose=False):
         test_diffs.append(test_diff)
     train_mean_dev=round(np.mean(train_diffs),1)
     test_mean_dev=round(np.mean(test_diffs),1)
-    #train_std_dev=round(np.std(train_diffs),1)
-    #test_std_dev=round(np.std(test_diffs),1)
     if verbose==True:
         print('Absolute % Deviation From Mean (50 trials)')
         print('Train',train_mean_dev)
