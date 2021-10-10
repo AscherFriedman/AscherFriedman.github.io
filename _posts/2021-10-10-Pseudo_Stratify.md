@@ -2,9 +2,9 @@
 
 
 ## High Level Idea
-Most compitent datascientists understand that if you have a categorical response variable that is very uneven, you should stratify your split. This ensures that your test and train set are both representative of the overall dataset. 
+Most compitent datascientists understand that if you have a categorical response variable that is extremely unbalanced, you should stratify your train/test split. This ensures that your test and train set are both representative of the overall dataset. 
 
-But what happens when you have a continuous response variable that is extremely skewed. Well in short you have the same problem, its quite likely one generates a test set with a mean not representative of the overall dataset. 
+But what happens when you have a continuous response variable that is extremely skewed? Well in short you have the same problem, and without this trick, its quite likely you'll generates a test set not representative of the overall dataset. 
 
 1. TOC
 {:toc} 
