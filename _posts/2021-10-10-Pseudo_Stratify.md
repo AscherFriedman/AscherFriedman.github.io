@@ -1,6 +1,7 @@
 # Pseudo Stratification for Skewed Continuous Response Variables
 
-
+1. TOC
+{:toc}
 
 ```python
 import numpy as np
