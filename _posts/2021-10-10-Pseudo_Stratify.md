@@ -1,7 +1,6 @@
 # Pseudo Stratification for Skewed Continuous Response Variables
 
-1. TOC
-{:toc}
+
 
 ```python
 import numpy as np
@@ -16,6 +15,9 @@ from sklearn.model_selection import train_test_split
 Most compitent datascientists understand that if you have a categorical response variable that is very uneven, you should stratify your split. This ensures that your test and train set are both representative of the overall dataset. 
 
 But what happens when you have a continuous response variable that is extremely skewed. Well in short you have the same problem, its quite likely one generates a test set with a mean not representative of the overall dataset. 
+
+1. TOC
+{:toc}
 
 ## Generate an uneven distribution and plot it
 
