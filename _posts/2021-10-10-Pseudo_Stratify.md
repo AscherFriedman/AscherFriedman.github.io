@@ -240,19 +240,6 @@ test_various_splits(df_samples,np.arange(0,50,1),recommended_splits=recommended_
 Medium Sample Size, high skew
 
 ```python
-recommended_splits
-np.arange(0,recommended_splits*2,3)
-```
-
-
-
-
-    array([ 0,  3,  6,  9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48,
-           51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87])
-
-
-
-```python
 #Create a gamma distribution, sample it
 n_samples=15000
 gamma_shape=.1
