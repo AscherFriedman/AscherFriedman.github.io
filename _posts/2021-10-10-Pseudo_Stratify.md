@@ -11,11 +11,13 @@ from sklearn.model_selection import train_test_split
 ```
 
 ## High Level Idea
+
 Most compitent datascientists understand that if you have a categorical response variable that is very uneven, you should stratify your split. This ensures that your test and train set are both representative of the overall dataset. 
 
 But what happens when you have a continuous response variable that is extremely skewed. Well in short you have the same problem, its quite likely one generates a test set with a mean not representative of the overall dataset. 
 
 ## Generate an uneven distribution and plot it
+
 This function generates a gamma distribution, gamma_shape being how skewed it is, and nsamples being how large our dataset is. Gamma is a perfect distribution for this, because very skewed datasets are often estimated quite well by gamma distributions. One example where I encountered this was insurance claims for vehicles, the vast majority are small issues like windshield damage, but can also be catostrophically expensive accidents.
 
 ```python
