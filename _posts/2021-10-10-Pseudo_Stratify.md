@@ -325,15 +325,3 @@ test_various_splits(df_samples,np.arange(0,recommended_splits*3,3),recommended_s
 | 1500 | .5 | 17 | 1.5 | 6.1 | 0.6 | 2.2 |
 | 15000 | .1 | 45| 1.0 | 4.2 | 0.4 | 1.6 |
 | 15000 | .5 | .843 | .843 | Gaussian | .5 | 1.9 |
-
-```python
-No Splits:
-Absolute % Deviation From Mean (50 trials)
-Train 1.0
-Test 4.2
-
-Recommended Split 45:
-Absolute % Deviation From Mean (50 trials)
-Train 0.4
-Test 1.6
-```
