@@ -274,57 +274,6 @@ test_various_splits(df_samples,np.arange(0,recommended_splits*3,3),recommended_s
 ![png](/images/Pseudo_Stratify_files/output_17_3.png)
 
 
-## Medium Importance of Stratified Sampling
-Medium Sample Size, high skew
-
-```python
-recommended_splits
-np.arange(0,recommended_splits*2,3)
-```
-
-
-
-
-    array([ 0,  3,  6,  9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48,
-           51, 54, 57, 60, 63, 66, 69, 72, 75, 78, 81, 84, 87])
-
-
-
-```python
-#Create a gamma distribution, sample it
-n_samples=15000
-gamma_shape=.1
-gamma_scale=1
-print('Samples:',str(n_samples)+',','Gamma Shape:',gamma_shape)
-df_samples=generate_distribution_and_plot(gamma_shape,gamma_scale,n_samples)
-print()
-recommended_splits=round(((np.min([n_samples,10000]))*.2)**.5)
-test_various_splits(df_samples,np.arange(0,recommended_splits*3,3),recommended_splits=recommended_splits)
-```
-
-    Samples: 15000, Gamma Shape: 0.1
-    
-
-
-![png](Pseudo_Stratify_files/output_17_1.png)
-
-
-    
-    No Splits:
-    Absolute % Deviation From Mean (50 trials)
-    Train 1.0
-    Test 4.2
-    
-    Recommended Split 45:
-    Absolute % Deviation From Mean (50 trials)
-    Train 0.4
-    Test 1.6
-    
-
-
-![png](Pseudo_Stratify_files/output_17_3.png)
-
-
 ## Low Importance of Stratified Sampling
 Medium sample size, low skew
 
