@@ -313,6 +313,7 @@ test_various_splits(df_samples,np.arange(0,recommended_splits*3,3),recommended_s
 
 
 ## Results
+
 | Sample Size | Gamma Shape | N Splits | Train Error No Strat | Test Error No Strat | Train Error With Strat | Test Error With Strat
 | --- | --- | --- | --- | --- | --- | --- |
 | 1500 | .1 | 17 | 4.1 | 16.2 | 1.7 | 6.8 |
