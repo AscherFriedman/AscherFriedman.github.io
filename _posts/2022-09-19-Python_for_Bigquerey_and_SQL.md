@@ -12,7 +12,6 @@ from google.cloud import bigquery
 ```python
 JSON_PATH = "path to JSON FILE from Google"
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]=JSON_PATH
-JSON_PATH = "Path to JSON File from GA4"
 client = bigquery.Client()
 ```
 
