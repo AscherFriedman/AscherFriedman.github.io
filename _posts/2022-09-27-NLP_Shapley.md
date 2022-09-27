@@ -11,26 +11,8 @@ To run this code you should use the requirements.txt as the versions of some pac
 
 Dataset: https://www.kaggle.com/datasets/tunguz/200000-jeopardy-questions
 
-
-```python
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import torch
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-from nltk import WordNetLemmatizer
-from sklearn.feature_extraction.text import TfidfVectorizer
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-import re
-from torch.nn.functional import softmax
-import shap
-from models.nn_model_tfidf import *
-import matplotlib.pyplot as plt
-%matplotlib inline
-```
-
+Code to run this yourself: https://github.com/AscherFriedman/AscherFriedman.github.io/tree/master/NLP_P1_Code
+Includes modules that are in other directories and imports of packages
 
 ```python
 #Lets grab a csv containing historical information from the show jeapordy. Each Question belongs to a Category.
