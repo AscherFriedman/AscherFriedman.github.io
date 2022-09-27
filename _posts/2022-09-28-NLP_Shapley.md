@@ -291,7 +291,7 @@ for feature in le.classes_[:]:
 ```
 Note that in these shaply plots a word either exists or it doesnt, so blue just means no word, and red means words are in the sentance for an observation.
 ## ART
-Here we can see that words such as Ballet, Artist, Painter and Opera tell the model that the sentance belongs to category ART. Also if it sees "Island" or "novel", it is a good indication that it is not art.
+Here we can see that words such as "Ballet", "Artist", "Painter" and "Opera" tell the model that the sentance belongs to category ART. Also if it sees "Island" or "Novel", it is a good indication that it is not art.
 ![](/images/NLP_p1/ART.png)
 
 # Picked some specific examples that are interesting to look at
