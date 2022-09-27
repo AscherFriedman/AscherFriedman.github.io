@@ -1,7 +1,6 @@
 # NLP Series P1, Shapley and Interpretability is a must!
 
-Disclaimer, for the sake of keeping these posts relatively short, I will not be conducting robust model validation, or using more advanced NLP techniques. This is purely to show a simple NLP multi-class classification task, and how we can
-interpret the results. 
+Disclaimer, for the sake of keeping these posts relatively short, I will not be conducting robust cross-validation, or using more advanced NLP techniques. This is purely to show a simple NLP multi-class classification task, and how we can interpret the results. 
 
 ## High Level Idea
 Trying to convince your stakeholder that your model is a black box of magic that they can simply trust is, understandably, a hard sell. Shapley values are an absolute must and in my professional experience have been responsible for major buy in to a modeling effort. 
