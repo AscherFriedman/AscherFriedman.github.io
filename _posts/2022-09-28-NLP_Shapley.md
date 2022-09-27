@@ -305,7 +305,7 @@ If it sees "Wrote" or again "Novel", it is a good indication that it is not geog
 History is an interesting case because the model is primarily defined by which words are not present.
 So if it sees "Novel" or "Artist" or "Wrote", it knows its not history.
 Some words are still positive Indicators, like "War".
-![](/images/NLP_p1/History.png)
+![](/images/NLP_p1/HISTORY.png)
 
 ## Literature
 "Novel", "Wrote", "Published" and "Book" tell the model that the question belongs to category Literature. 
