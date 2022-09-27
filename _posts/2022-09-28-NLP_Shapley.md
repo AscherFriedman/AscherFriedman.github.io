@@ -289,6 +289,8 @@ def specific_example(feature,threshold,sample_num, save_fig = False):
 for feature in le.classes_[:]:
     summary(feature)
 ```
+## ART
+![](/images/NLP_p1/ART.png)
 
 # Picked some specific examples that are interesting to look at
 
@@ -338,3 +340,4 @@ print('Modle Predicts: ', le.classes_[probs.argmax()])
     
 
 The model is just barely wrong! With a little hyperparameter tuning, or simple tricks like adding in bi-grams, i'm sure it can figure it out!
+
