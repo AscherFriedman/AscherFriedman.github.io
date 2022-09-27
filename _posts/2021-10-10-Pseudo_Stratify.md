@@ -1,6 +1,8 @@
 # Pseudo Stratification for Skewed Continuous Response Variables
 
- 
+1. TOC
+{:toc} 
+
 ## High Level Idea
 Most competent data scientists understand that if you have a categorical response variable that is extremely unbalanced, you should stratify your train/test split. This ensures that your test and train set are both representative of the overall dataset. 
 
