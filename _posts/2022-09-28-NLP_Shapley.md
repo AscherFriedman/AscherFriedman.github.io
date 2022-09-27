@@ -289,13 +289,32 @@ def specific_example(feature,threshold,sample_num, save_fig = False):
 for feature in le.classes_[:]:
     summary(feature)
 ```
-Note that in these shaply plots a word either exists or it doesnt, so blue just means no word, and red means words are in the sentance for an observation.
+Note that in these shaply plots a word either exists or it doesnt, so blue just means no word, and red means words are in the sentance we are plotting.
+
 ## ART
-Here we can see that words such as "Ballet", "Artist", "Painter" and "Opera" tell the model that the sentance belongs to category ART. Also if it sees "Island" or "Novel", it is a good indication that it is not art.
+Here we can see that words such as "Ballet", "Artist", "Painter" and "Opera" tell the model that the question belongs to category ART. 
+If it sees "Island" or "Novel", it is a good indication that it is not art.
 ![](/images/NLP_p1/ART.png)
 
-# Picked some specific examples that are interesting to look at
+## Geography
+"Island", "Gulf", "Lake" and "Mile" tell the model that the question belongs to category Geography. 
+If it sees "Wrote" or again "Novel", it is a good indication that it is not geography.
+![](/images/NLP_p1/GEOGRAPHY.png)
 
+## History
+History is an interesting case because the model is primarily defined by which words are not present.
+So if it sees "Novel" or "Artist" or "Wrote", it knows its not history.
+Some words are still positive Indicators, like "War".
+![](/images/NLP_p1/History.png)
+
+## Literature
+"Novel", "Wrote", "Published" and "Book" tell the model that the question belongs to category Literature. 
+If it sees "island" or "Country", it is a good indication that it is not literature.
+![](/images/NLP_p1/LITERATURE.png)
+
+"Novel" ends up being important because theres a category that we combined into Literature called "Novels" so each question in that subcategory had the word Novel in it.
+
+# Picked some specific examples that are interesting to look at
 
 ```python
 specific_example('ART',.1,3, save_fig=True)
@@ -303,15 +322,32 @@ specific_example('HISTORY', .1, 1, save_fig=True)
 specific_example('GEOGRAPHY', .1, 5, save_fig=True)
 specific_example('LITERATURE', .1, 9, save_fig=True)
 ```
+## ART
+![](/images/NLP_p1/ART_barplot.png)
+"Opera" and "Composer" indicate its ART, but "California" and "West" indicate its not art! Still we can see the positives are much larger than the negatives and the model still likely choses art.
 
-# Pick one specific interesting case and see how each category interprets it
+## Geography
+![](/images/NLP_p1/GEOGRAPHY_barplot.png)
+"Lake and "Part" tell the model its geography, but "Home" is a small hint it might not be (home probably belongs frequently to literature and history.
+
+## History
+![](/images/NLP_p1/HISTORY_barplot.png)
+"Treaty" and "Country" tell the model it is likely History, but "French" says it may not be, probably because of many French Artists.
+
+## Literature
+![](/images/NLP_p1/LITERATURE_barplot.png)
+"Shakespear", "Comedy", "Love", all hallmarks of literature, but so many literature questions contained the word "Novel" that the lack of this word makes the model uncertain
+
+# Lets Pick an interesting and very confliting case and see how the model evaluates the likelyhood of each category.
+"Tradition says this country's first emperor, Menelik 1, was the son of King Solomon and the Queen of Sheba"
+This is a history question.
 
 
 ```python
 for feature in le.classes_:
     encoded = le.transform(['HISTORY'])[0]
     sample_index = np.where(y_test.cpu().numpy() == encoded)[0][32]
-    shap_vals = shap_values[le.transform(['LITERATURE'])[0]][sample_index]
+    shap_vals = shap_values[le.transform([feature])[0]][sample_index]
     use = shap_vals*[abs(shap_vals) > .05][0]
     shap.bar_plot(use,feature_names = feature_names,max_display = (abs(use) > 0).sum(),show = False)
     sentence  = df.loc[X_test_original.index[sample_index],'Question']
@@ -320,6 +356,23 @@ for feature in le.classes_:
     plt.show()
 ```
 
+# ART
+![](/images/NLP_p1/ART_one_sample_mult_feat_.png)
+The presence of words like "Country" and "Say" and "First", as well as the absence of words like "Artist" and "Painter" all indicate this is not ART.
+Art is ruled out!
+
+## Geography
+![](/images/NLP_p1/GEOGRAPHY_one_sample_mult_feat_.png)
+Geography sees words like country that give it some confidence, but "Say" and "King" are enough to know its not Geography.
+Geography is ruled out!
+
+## History
+![](/images/NLP_p1/HISTORY_one_sample_mult_feat_.png)
+Here the model sees "King" and "Country" giving it confidence, but also "Say", "First" and "Son" which makes it doubtful. Say usually belongs to literature, as does Son.
+
+## Literature
+![](/images/NLP_p1/LITERATURE_one_sample_mult_feat_.png)
+Here the model sees "Say", "First" and "Son", which are frequently found in literature, but it still has doubts given that it sees "Country" and "Emperor" and no "Novel"
 
 ```python
 print('True Label:',df.loc[X_test_original.index[sample_index]].Category)
@@ -342,4 +395,3 @@ print('Modle Predicts: ', le.classes_[probs.argmax()])
     
 
 The model is just barely wrong! With a little hyperparameter tuning, or simple tricks like adding in bi-grams, i'm sure it can figure it out!
-
