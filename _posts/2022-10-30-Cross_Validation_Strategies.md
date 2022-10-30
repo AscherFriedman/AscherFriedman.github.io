@@ -15,7 +15,7 @@ If it looks a bit confusing, don’t worry! On the top we have the benefits of t
 
 <img src="/images/CV_STRATS/TRAIN_TEST.png" width="300">
 
-### 1.) Train-Test
+### Train-Test
 
 The most simple cross-validation strategy, a portion of the data is used for training and selecting hyper-parameters, and a portion is used to validate the performance of the model.
 
@@ -27,11 +27,11 @@ Cons:
 *	Prone to Bias
 *	Bad for small datasets with high dimensionality
 
-### 2.)	Train-Test-Valid
+### Train-Test-Valid
 
 The second most simple cross-validation strategy, again we use the train and valid iteratively to select the best hyper-parameters. Here we have an additional test set, to see the performance of a model that hasn’t seen this data in any portion of the modeling process. Generally a better option than Train-Test due to less bias, but with slightly less data for training and validating.
 
-### 3.)	K-fold CV
+## K-fold CV
 
 <img src="/images/CV_STRATS/KF.png">
 A middle of the road approach concerning the techniques referenced here. We pick a k, (5 in this example, 10 is more common), and run the whole process k times, using a different 20% (1/k) of the data as a validation set each time. Then we combine these 5 parts, and we have an estimate for the  performance of the model, using every datapoint instead of just the Valid portion.
@@ -43,12 +43,12 @@ Pros:
 Cons: 
 *	Somewhat computationally expensive (k* more expensive). 
 
-### 4.) Robust K-fold CV
+## Robust K-fold CV
 <img src="/images/CV_STRATS/R_KF.png" height="350">
 
 We use 80% of the data for k-fold cross validation, and save 20% as a test set that the process has not seen yet. Similar to K-fold, but with slightly less data available for the K-fold process and slightly less bias. 
 
-### 5.) Nested K-fold CV
+## Nested K-fold CV
 <img src="/images/CV_STRATS/NEST_KF.png">
 
 Here we repeat this entire K-fold process 5 times (for k=5), so that we have a test set score independent of the K-fold procedure for every data point.
