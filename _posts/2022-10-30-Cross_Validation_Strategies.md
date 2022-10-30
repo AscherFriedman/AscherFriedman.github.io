@@ -63,20 +63,17 @@ Cons:
 
 # Use cases: 
 
-### 1.)	
-* Problem: We are doing image classification with a massive dataset with millions of rows. 
-*	Solution: **Train-Test or Train-Test-Valid (my preference)**
-*	Explanation: The model is computationally expensive making K-fold unrealistically long to compute results, and due to the dataset size, the chances of bias due to a bad test split is extremely low.
+### Train-Test or Train-Test-Valid
+* Situation: We are doing image classification with a massive dataset with millions of rows. 
+*	Explanation: The model is computationally expensive making K-fold unrealistically long to compute results, and due to the dataset size, the chances of bias due to a bad test split is extremely low. I prefer Train-Test_Valid
 
-### 2.)	
-* Problem: We have a small tabular dataset, with large dimensionality, and extremely high business impact  for each decision.
-*	Solution: **Nested K-Fold Cross Validation**
+### Nested K-Fold Cross Validation
+* Situation: We have a small tabular dataset, with large dimensionality, and extremely high business impact  for each decision.
 *	Explanation: Small tabular dataset means the modeling computational cost is low and Nested K-Fold will still be light on computing power even with a computationally expensive CV procedure. High business impact means we want as accurate an estimation of the performance as possible.
 
-### 3.)	
-* Problem: We have a medium sized dataset, and still want to be careful to avoid bias and accurately represent performance. (Middle of the road)
-*	Solution: **K-fold or Robust K-Fold (my preference)**
-*	Explanation: A dataset of a few hundred thousand rows being trained with a K-Fold CV will not be unreasonably computationally expensive. The results are still very robust and unbiased. Good middle of the road solution
+### K-fold or Robust K-Fold
+* Situation: We have a medium sized dataset, and still want to be careful to avoid bias and accurately represent performance. (Middle of the road)
+*	Explanation: A dataset of a few hundred thousand rows being trained with a K-Fold CV will not be unreasonably computationally expensive. The results are still very robust and unbiased. Good middle of the road solution. I prefer Robust K-Fold generally.
 
 # Closing Thoughts
 I took my time putting this together as I feel its a nuanced discussion that doesnt always have perfect answers. Some of your choices will come down to practical considerations, and some down to how you personally weight the pros and cons of each strategy. This was by no means an exuastive list of CV strategies or factors that can influence these decisions, but I hope its serves as a concise high level view of the topic. 
