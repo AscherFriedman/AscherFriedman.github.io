@@ -63,15 +63,15 @@ Cons:
 
 # Use cases: 
 
-### Train-Test or Train-Test-Valid
+### Train-Test-Valid (Or Train-Test)
 * Situation: We are doing image classification with a massive dataset with millions of rows. 
 *	Explanation: The model is computationally expensive making K-fold unrealistically long to compute results, and due to the dataset size, the chances of bias due to a bad test split is extremely low. I prefer Train-Test_Valid
 
-### Nested K-Fold Cross Validation
+### Nested K-Fold
 * Situation: We have a small tabular dataset, with large dimensionality, and extremely high business impact  for each decision.
 *	Explanation: Small tabular dataset means the modeling computational cost is low and Nested K-Fold will still be light on computing power even with a computationally expensive CV procedure. High business impact means we want as accurate an estimation of the performance as possible.
 
-### K-fold or Robust K-Fold
+### Robust K-Fold (Or K-Fold)
 * Situation: We have a medium sized dataset, and still want to be careful to avoid bias and accurately represent performance. (Middle of the road)
 *	Explanation: A dataset of a few hundred thousand rows being trained with a K-Fold CV will not be unreasonably computationally expensive. The results are still very robust and unbiased. Good middle of the road solution. I prefer Robust K-Fold generally.
 
