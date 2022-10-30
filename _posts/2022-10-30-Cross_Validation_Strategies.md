@@ -1,10 +1,11 @@
+
 # Cross Validation Strategies
 
 
 ## High Level Idea
 During my career as a Data Scientist, I’ve learned there are a multitude of strategies for cross-validation, and that each have their time and place. Pictured below is an overview of what we’ll be discussing in this blog post. 
 
-<img src="/images/CV_STRATS/OVERVIEW.jpg">
+<img class="plain" img src="/images/CV_STRATS/OVERVIEW.jpg"/>
   
 
 
