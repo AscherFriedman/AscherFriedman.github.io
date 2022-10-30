@@ -77,3 +77,6 @@ Cons:
 * Problem: We have a medium sized dataset, and still want to be careful to avoid bias and accurately represent performance. (Middle of the road)
 *	Solution: **K-fold or Robust K-Fold (my preference)**
 *	Explanation: A dataset of a few hundred thousand rows being trained with a K-Fold CV will not be unreasonably computationally expensive. The results are still very robust and unbiased. Good middle of the road solution
+
+# Closing Thoughts
+I took my time putting this together as I feel its a nuanced discussion that doesnt always have perfect answers. Some of your choices will come down to practical considerations, and some down to how you personally weight the pros and cons of each strategy. This was by no means an exuastive list of CV strategies or factors that can influence these decisions, but I hope its serves as a concise high level view of the topic. 
