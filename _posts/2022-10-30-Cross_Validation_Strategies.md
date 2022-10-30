@@ -1,9 +1,10 @@
 # Cross Validation Strategies
 
+
 ## High Level Idea
 During my career as a Data Scientist, I’ve learned there are a multitude of strategies for cross-validation, and that each have their time and place. Pictured below is an overview of what we’ll be discussing in this blog post. 
 
-![png](/images/CV_STRATS/OVERVIEW_.png)
+<kbd> <img src="/images/CV_STRATS/OVERVIEW_.png"> <kbd>
 
 If it looks a bit confusing, don’t worry! Pictured above we have the benefits of the various strategies, and below we have the situations that would lead you to lean toward various strategies. Upon explaining the various strategies it will serve as a great high-level overview of the pros, cons and decision criteria that should be considered when choosing a cross validation strategy. We will explain all of the CV strategies, and then discuss a few use cases and why you would use one over the other.
 
@@ -17,7 +18,7 @@ If it looks a bit confusing, don’t worry! Pictured above we have the benefits 
 
 ### Train-Test
 
-The most simple cross-validation strategy, a portion of the data is used for training and selecting hyper-parameters, and a portion is used to validate the performance of the model.
+The most simple cross-validation strategy, one portion of the data is used for training and selecting hyper-parameters, and a portion is used to validate the performance of the model.
 
 Pros: 
 *	The most computationally cheap strategy 
